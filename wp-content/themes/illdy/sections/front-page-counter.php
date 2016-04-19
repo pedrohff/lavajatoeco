@@ -9,7 +9,7 @@
 
 <?php
 $counter_background_type = get_theme_mod( 'illdy_counter_background_type', 'image' );
-$counter_background_image = get_theme_mod( 'illdy_counter_background_image', esc_url( get_template_directory_uri() . '/layout/images/front-page/front-page-counter.jpg' ) );
+$counter_background_image = get_theme_mod( 'illdy_counter_background_image', esc_url( get_template_directory_uri() . '/layout/images/LJE/6.jpg' ) );
 $counter_background_color = get_theme_mod( 'illdy_counter_background_color', '#000000' );
 ?>
 
