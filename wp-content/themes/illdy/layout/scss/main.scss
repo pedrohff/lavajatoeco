@@ -209,11 +209,11 @@ input {
 					}
 
 					a {
-						color: $verdeclaro;
+						color: #ffffff;
 						@include transition(all 0.3s);
 
 						&:hover {
-							color: $verdeescuro;
+							color: $verdeclaro;
 							text-decoration: none;
 						}
 					}
@@ -1011,7 +1011,7 @@ input {
 					height: 46px;
 					background-color: $verdeescuro;
 					padding: 0 20px;
-					border: 1px solid #cccccc;
+					border: 1px solid #020F08;
 					outline: 0;
 					font-family: "Source Sans Pro", sans-serif;
 					font-size: 15px;
@@ -1041,7 +1041,7 @@ input {
 					background-color: $verdeescuro;
 					margin: 0;
 					padding: 10px 20px 10px 20px;
-					border: 1px solid #cccccc;
+					border: 1px solid #020F08;
 					outline: 0;
 					resize: none;
 					display: block;
@@ -2318,5 +2318,21 @@ input {
 	#team .section-content .person .person-content .person-content-social li {
 		display: inline-block;
 		float: none;
+	}
+}
+
+@font-face {
+    font-family: "Leafs";
+    src: url("../fonts/Leafs.ttf") format("truetype");
+}
+
+#svglogoheader{
+	-webkit-filter: drop-shadow( 1px 1px 0px $verdeclaro );
+            filter: drop-shadow( 1px 1px 0px $verdeclaro );
+}
+
+#svgfooter{
+	&> g > path, &> g > text{
+		fill: #cccccc;
 	}
 }

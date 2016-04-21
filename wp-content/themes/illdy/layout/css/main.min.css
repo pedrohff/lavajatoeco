@@ -160,13 +160,13 @@ input {
                 #header .top-header .header-navigation ul li.menu-item-has-children .sub-menu li a:after {
                   display: none; }
           #header .top-header .header-navigation ul li a {
-            color: #93AE79;
+            color: #ffffff;
             -webkit-transition: all 0.3s;
             -moz-transition: all 0.3s;
             -o-transition: all 0.3s;
             transition: all 0.3s; }
             #header .top-header .header-navigation ul li a:hover {
-              color: #0B290F;
+              color: #93AE79;
               text-decoration: none; }
   #header .bottom-header {
     width: 100%;
@@ -760,7 +760,7 @@ input {
           height: 46px;
           background-color: #0B290F;
           padding: 0 20px;
-          border: 1px solid #cccccc;
+          border: 1px solid #020F08;
           outline: 0;
           font-family: "Source Sans Pro", sans-serif;
           font-size: 15px;
@@ -780,7 +780,7 @@ input {
           background-color: #0B290F;
           margin: 0;
           padding: 10px 20px 10px 20px;
-          border: 1px solid #cccccc;
+          border: 1px solid #020F08;
           outline: 0;
           resize: none;
           display: block; }
@@ -1666,5 +1666,14 @@ input {
   #team .section-content .person .person-content .person-content-social li {
     display: inline-block;
     float: none; } }
+@font-face {
+  font-family: "Leafs";
+  src: url("../fonts/Leafs.ttf") format("truetype"); }
+#svglogoheader {
+  -webkit-filter: drop-shadow(1px 1px 0px #93AE79);
+  filter: drop-shadow(1px 1px 0px #93AE79); }
+
+#svgfooter > g > path, #svgfooter > g > text {
+  fill: #cccccc; }
 
 /*# sourceMappingURL=main.min.css.map */
