@@ -13,49 +13,13 @@ $jumbotron_general_image = get_theme_mod( 'illdy_jumbotron_general_image', esc_u
 $preloader_enable = get_theme_mod( 'illdy_preloader_enable', 1 );
 $svglogo="<svg id='svglogoheader' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px'
 	 width='100%' viewBox='0 0 225.834 50' enable-background='new 0 0 225.834 50' xml:space='preserve'>
-<g id='Layer_1' display='none'>
-	<path display='inline' fill='none' d='M52.25-15.708c0,3.523,20.574,6.375,46,6.375'/>
-	<path display='inline' fill='none' d='M98.25-9.333c0,1.935,19.288,3.5,43.125,3.5'/>
-	<path display='inline' fill='none' d='M141.375-5.833c0-4.007-14.479-7.25-32.375-7.25'/>
-	<path display='inline' fill='none' d='M109-13.083c0,0-6.15,0-13.75,0'/>
-	<path display='inline' fill='none' d='M95.25-13.083c0,0-5.255,0-11.75,0'/>
-</g>
 <g id='Layer_2'>
 	<ellipse fill='#83AF41' cx='49.979' cy='25.104' rx='48.063' ry='21.563'/>
 	<path fill='#84B041' d='M23.167,10.667c-11.394-5.599-12.831-8.649-12.924-9.7c-0.589,5.726,1.602,16.021,1.602,16.021
 		S37.667,17.792,23.167,10.667z'/>
 	<g>
 		<g>
-			<defs>
-				<rect id='SVGID_1_' x='91.334' y='7.042' width='150' height='50'/>
-			</defs>
-			<clipPath id='SVGID_2_'>
-				<use xlink:href='#SVGID_1_'  overflow='visible'/>
-			</clipPath>
-			<g clip-path='url(#SVGID_2_)'>
-				<defs>
-					<rect id='SVGID_3_' x='91.334' y='7.042' width='150' height='50'/>
-				</defs>
-				<clipPath id='SVGID_4_'>
-					<use xlink:href='#SVGID_3_'  overflow='visible'/>
-				</clipPath>
-			</g>
-			<g clip-path='url(#SVGID_2_)'>
-				<defs>
-					<rect id='SVGID_5_' x='91.334' y='7.042' width='150' height='50'/>
-				</defs>
-				<clipPath id='SVGID_6_'>
-					<use xlink:href='#SVGID_5_'  overflow='visible'/>
-				</clipPath>
-			</g>
-			<g clip-path='url(#SVGID_2_)'>
-				<defs>
-					<rect id='SVGID_7_' x='91.334' y='7.042' width='150' height='50'/>
-				</defs>
-				<clipPath id='SVGID_8_'>
-					<use xlink:href='#SVGID_7_'  overflow='visible'/>
-				</clipPath>
-			</g>
+			
 			<g clip-path='url(#SVGID_2_)'>
 				<defs>
 					<rect id='SVGID_9_' x='91.334' y='7.042' width='150' height='50'/>

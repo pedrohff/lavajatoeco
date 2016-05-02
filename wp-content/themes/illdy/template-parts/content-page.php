@@ -12,9 +12,11 @@
 			<?php the_post_thumbnail( 'illdy-blog-list' ); ?>
 		</div><!--/.blog-post-image-->
 	<?php endif; ?>
-	<div class="col-sm-12 blog-post-title-big">
-		<h2><?php the_title(); ?><span class="span-dot"><?php _e( '.', 'illdy' ); ?></span></h2>
-	</div><!--/.col-sm-12-->
+	<div class="row">
+		<div class="col-sm-12 blog-post-title-big">
+			<h2><?php the_title(); ?><span class="span-dot"><?php _e( '.', 'illdy' ); ?></span></h2>
+		</div><!--/.col-sm-12-->
+	</div>
 	<div class="blog-post-entry markup-format">
 		<?php
 		the_content();

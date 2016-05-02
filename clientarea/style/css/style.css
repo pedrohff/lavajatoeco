@@ -1,0 +1,90 @@
+body{
+	background: #FBFBFB url('../../style/img/background.jpg') no-repeat;
+	font-family: "Source Sans Pro", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: #183128;
+    padding-top: 0px;
+}
+/* header */
+.top{
+	background: #fff;
+	border-bottom: solid #D0D0D0 2px;
+	height: 50px;
+	margin-bottom: 50px;
+}
+
+.top h1{
+	text-transform: uppercase;
+	font-size:42px;
+	margin-top: 5px;
+	line-height: 0.74;
+    font-weight: 900;
+    color:#0B4422;
+    text-align: right;
+}
+
+.logo{
+	height:60px;
+	margin-top: 5px;
+}
+
+
+/* body */
+.body{
+	background: #F9F9F9;
+    border: 1px #CACACA solid;
+	padding: 0 15px;
+	border-radius: 5px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+/* footer */
+
+.footer{
+}
+
+/* home */
+.servico{
+
+}
+
+.servico .thumbnail{
+	text-decoration: none;
+	background: #0B4422;
+	text-align: center;
+	color: white;
+}
+
+
+/* misc */
+
+label{
+	font-weight: 500;
+	font-size: 18px;
+}
+
+.align{
+	margin: 0 auto;
+}
+
+.btn{
+	width: 100%;
+	margin-top:15px;
+}
+
+.btn-primary{
+	background: #375D3B;
+}
+
+.btn-primary:hover{
+	background: rgb(0, 82, 33);
+}
+
+
+.form{
+	width: 95%;
+	margin-left: auto;
+	margin-right: auto;
+}
