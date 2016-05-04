@@ -3,7 +3,6 @@
 ?>
 <?php include("admin/connection.php");?>
 <?php include("admin/addservico.php");?>
-
 <?php include("parts/header.php");?>
 	
 	<main class="body">
@@ -14,6 +13,12 @@
 			<div class="col-md-6 pull-right">
 				<nav class="nav navbar-default">
 					<ul class="nav navbar-nav navbar-right">
+						<?php 
+							if($usuario['tipo']=1)
+								echo "<li><a href='admin/logout.php?logout'>Administração</a></li>";
+							if($usuario['tipo']=0)
+								echo "<li><a href='admin/logout.php?logout'>Historico de Pedidos</a></li>";
+						?>
 						<li><a href="admin/logout.php?logout">Sair</a></li>
 					</ul>
 				</nav>
@@ -26,45 +31,42 @@
 
 
 		  </div>
-		  <div class="col-xs-6 col-md-4 servico">
-		    <a href="#" class="thumbnail" name="serv1" data-toggle="modal" data-target="#servico" id="sv1">
-		      <h3>Serviço #1</h3>
-		      <h5>Descrição #1</h5>
-		      <h2>Preço #1</h2>
-		    </a>
-		  </div>
+		  <form method="post">
+			  <div class="col-xs-6 col-md-4 servico">
+			    <a href="#" class="thumbnail" name="serv1" data-toggle="modal" data-target="#servico" data-servico="1" id="sv2">
+			      <h3>Serviço #1</h3>
+			      <h5>Descrição #1</h5>
+			      <h2>Preço #1</h2>
+			    </a>
+			  </div>
 
-		  <div class="col-xs-6 col-md-4 servico">
-		    <a href="#" class="thumbnail" name="serv2" data-toggle="modal" data-target="#servico" id="sv2">
-		      <h3>Serviço #2</h3>
-		      <h5>Descrição #2</h5>
-		      <h2>Preço #2</h2>
-		    </a>
-		  </div>
+			  <div class="col-xs-6 col-md-4 servico">
+			    <a href="#" class="thumbnail" name="serv2" data-toggle="modal" data-target="#servico" data-servico="2" id="sv2">
+			      <h3>Serviço #2</h3>
+			      <h5>Descrição #2</h5>
+			      <h2>Preço #2</h2>
+			    </a>
+			  </div>
 
-		  <div class="col-xs-6 col-md-4 servico">
-		    <a href="#" class="thumbnail" name="serv3" data-toggle="modal" data-target="#servico" id="sv3">
-		      <h3>Serviço #3</h3>
-		      <h5>Descrição #3</h5>
-		      <h2>Preço #3</h2>
-		    </a>
-		  </div>
+			  <div class="col-xs-6 col-md-4 servico">
+			    <a href="#" class="thumbnail" name="serv3" data-toggle="modal" data-target="#servico" data-servico="3" id="sv3">
+			      <h3>Serviço #3</h3>
+			      <h5>Descrição #3</h5>
+			      <h2>Preço #3</h2>
+			    </a>
+			  </div>
+		  </form>
 <script type="text/javascript">
-	$('#sv1').click(function (e) {
-		$servico='1';
-	});
-	$('#sv2').click(function (e) {
-		$servico='2';
-	});
-	$('#sv3').click(function (e) {
-		$servico='3';
-	});
 	$(function () {
         $('#datetimepicker1').datetimepicker();
         $('#datetimepicker1').data("DateTimePicker").locale('pt-br');
-    });
 
+        $('#servico').on('show.bs.modal', function (e) {
+	 		var servicoid = $(e.relatedTarget).data('servico');
+    		$(e.currentTarget).find('input[name="servicoinput"]').val(servicoid);
+		})
 
+    });	 	
 </script>
 
 
@@ -100,20 +102,20 @@
 
         	<label for="comentario">Comentário:</label>
         	<textarea name="comentario" class="form-control"></textarea>
-
-        
+        	<input type="hidden" name="servicoinput" value="">
       </div>
       <div class="modal-footer">
       	<div class="col-md-3 col-md-offset-6">
         	<button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
         </div>
         <div class="col-md-3">
-        	<button type="button" class="btn btn-primary">Concluir</button>
+        	<button type="submit" class="btn btn-primary" name="btn-solicitar" id="concluir">Concluir</button>
         </div>
+
+        
         </form>
       </div>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
-
 <?php include("parts/footer.php");?>

@@ -8,22 +8,28 @@
  
 
  //botao é apertado:
-if(isset($_POST['btn-signup']))
+if(isset($_POST['btn-solicitar']))
 {
 
  $sid= mysqli_real_escape_string($connection,$_POST['local']);
- $data="";
+ $data= mysqli_real_escape_string($connection,$_POST['horario']);
+ $dataparse= preg_replace("/[^0-9 ]/","",$data);
  $comentario= mysqli_real_escape_string($connection,$_POST['comentario']);
- if(mysqli_query($connection,"INSERT INTO solicitacoes (cpf,servico_codigo,superuser_id,estado,data_horario,valorpago,comentario) VALUES('$cpf',,$sid,'aberto','$valor','$comentario')"))
+ $servico = mysqli_real_escape_string($connection,$_POST['servicoinput']);
+ $queryservico = mysqli_query($connection, "SELECT * FROM servico WHERE codigo=$servico");
+ $arrayservico = mysqli_fetch_array($queryservico);
+ $desconto=5;
+ $valor = ($sid!=0) ? $arrayservico['preco_sugerido']-$desconto : $arrayservico['preco_sugerido'];
+ if(mysqli_query($connection,"INSERT INTO solicitacoes (Usuario_cpf,Servico_codigo,Superuser_id,estado,data_horario,valor_pago,comentario) VALUES('$cpf','$servico','$sid','aberto',STR_TO_DATE('$dataparse','%d%m%Y %k%i'),'$valor','$comentario')"))
  {
   ?>
-        <script>alert('successfully registered ');</script>
+        <script>alert('Pedido Registrado');</script>
         <?php
  }
  else
  {
   ?>
-        <script>alert('error while registering you...');</script>
+        <script>alert(<?php echo $sid ?>);</script>
         <?php
  }
 }
