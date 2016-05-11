@@ -24,13 +24,13 @@ if(isset($_POST['btn-signup']))
  if(mysqli_query($connection,"INSERT INTO usuario (cpf,email,nome,sexo,senha,rua,bairro,complemento,numero,CEP,cidade,estado,tipo) VALUES('$cpf','$email','$nome','$sexo','$pass','$rua','$bairro','$complemento','$numero','$cep','$cidade','$estado','00')"))
  {
   ?>
-        <script>alert('successfully registered ');</script>
+        <script>alert('Registrado com sucesso');</script>
         <?php
  }
  else
  {
   ?>
-        <script>alert('error while registering you...');</script>
+        <script>alert('Erro no cadastro');</script>
         <?php
  }
 }

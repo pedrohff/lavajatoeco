@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
+<link rel="icon" href="http://lavajatoeco.com.br/wp-content/themes/illdy/layout/images/favicon.png" />
 <!--style-->
 <link rel="stylesheet" type="text/css" href="../clientarea/style/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="../clientarea/style/css/jumbotron-narrow.css">
@@ -30,7 +30,7 @@
 <div class="top">
 	<div class="container">
 		<div class="col-md-4">
-			<a href="/clientarea"><img src="style/img/sub-logo.png" class="logo"></a>
+			<a href="/clientarea"><img src="style/img/Sub-logo.png" class="logo"></a>
 		</div>
 		<div class="col-md-8">
 			<h1>Area do Cliente</h1>
@@ -38,4 +38,3 @@
 	</div>
 
 </div>
-<div class="container">

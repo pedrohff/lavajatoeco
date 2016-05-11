@@ -85,13 +85,14 @@ $svglogo="<svg id='svglogoheader' version='1.1' xmlns='http://www.w3.org/2000/sv
 	<head>
 		<meta charset="<?php bloginfo( 'charset' ); ?>" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<link rel="icon" href="http://lavajatoeco.com.br/wp-content/themes/illdy/layout/images/favicon.png" />		
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class(); ?>>
 		<?php if( $preloader_enable == 1 ): ?>
 			<div class="pace-overlay"></div>
 		<?php endif; ?>
-		<header id="header" class="<?php if( is_front_page() ): echo 'header-front-page'; else: echo 'header-blog'; endif; ?>" style="background-image: url('<?php if( is_front_page() ): echo ( ( $jumbotron_general_image ) ? esc_url( $jumbotron_general_image ) : '' ); else: echo esc_url( get_header_image() ); endif; ?>');">
+		<header id="header" class="<?php if( is_front_page() ): echo 'header-front-page'; else: echo 'header-blog'; endif; ?>" style="background-image: url('<?php echo ($jumbotron_general_image);?>');">
 			<div class="top-header">
 				<div class="container">
 					<div class="row">

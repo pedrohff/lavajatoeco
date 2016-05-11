@@ -4,7 +4,7 @@
 <?php include("admin/connection.php");?>
 <?php include("admin/addservico.php");?>
 <?php include("parts/header.php");?>
-	
+	<div class="container">
 	<main class="body">
 		<div class="row">
 			<div class="col-md-6">
@@ -14,10 +14,12 @@
 				<nav class="nav navbar-default">
 					<ul class="nav navbar-nav navbar-right">
 						<?php 
-							if($usuario['tipo']=1)
-								echo "<li><a href='admin/logout.php?logout'>Administração</a></li>";
-							if($usuario['tipo']=0)
-								echo "<li><a href='admin/logout.php?logout'>Historico de Pedidos</a></li>";
+							if($usuario['tipo']==01){
+								echo "<li><a href='administracao.php'>Administração</a></li>";
+							}
+							if($usuario['tipo']==00){
+								echo "<li><a href='historico.php'>Historico de Pedidos</a></li>";
+							}
 						?>
 						<li><a href="admin/logout.php?logout">Sair</a></li>
 					</ul>
@@ -32,27 +34,34 @@
 
 		  </div>
 		  <form method="post">
-			  <div class="col-xs-6 col-md-4 servico">
-			    <a href="#" class="thumbnail" name="serv1" data-toggle="modal" data-target="#servico" data-servico="1" id="sv2">
-			      <h3>Serviço #1</h3>
-			      <h5>Descrição #1</h5>
-			      <h2>Preço #1</h2>
+			  <div class="col-xs-6 col-md-4 col-md-offset-2 servico">
+			    <a href="#" class="thumbnail" name="serv1" data-toggle="modal" data-target="#servico" data-servico="1" id="sv1">
+			      <h3>Lavagem a Seco</h3>
+			      <h5> </h5>
+			      <h1>R$ 40,00</h1>
 			    </a>
 			  </div>
-
 			  <div class="col-xs-6 col-md-4 servico">
 			    <a href="#" class="thumbnail" name="serv2" data-toggle="modal" data-target="#servico" data-servico="2" id="sv2">
-			      <h3>Serviço #2</h3>
-			      <h5>Descrição #2</h5>
-			      <h2>Preço #2</h2>
+			      <h3>Lavagem a Vapor</h3>
+			      <h5> </h5>
+			      <h1>R$ 50,00</h1>
+			    </a>
+			  </div>
+
+			  <div class="col-xs-6 col-md-4 col-md-offset-2 servico">
+			    <a href="#" class="thumbnail" name="serv3" data-toggle="modal" data-target="#servico" data-servico="3" id="sv3">
+			      <h3>Lavagem a Seco</h3>
+			      <h5>(completa)</h5>
+			      <h1>R$ 45,00</h1>
 			    </a>
 			  </div>
 
 			  <div class="col-xs-6 col-md-4 servico">
-			    <a href="#" class="thumbnail" name="serv3" data-toggle="modal" data-target="#servico" data-servico="3" id="sv3">
-			      <h3>Serviço #3</h3>
-			      <h5>Descrição #3</h5>
-			      <h2>Preço #3</h2>
+			    <a href="#" class="thumbnail" name="serv4" data-toggle="modal" data-target="#servico" data-servico="4" id="sv4">
+			      <h3>Lavagem a Vapor</h3>
+			      <h5>(completa)</h5>
+			      <h1>R$ 55,00</h1>
 			    </a>
 			  </div>
 		  </form>
@@ -79,7 +88,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title">Modal title</h4>
+        <h4 class="modal-title">Solicitar serviço</h4>
       </div>
       <div class="modal-body">
         <form method="post">

@@ -43,9 +43,18 @@ $general_entry = get_theme_mod( 'illdy_team_general_entry', __( 'Meet the people
 						'after_title'	=> ''
 					);
 
-					the_widget( 'Illdy_Widget_Person', 'title='. __( 'Mark Lawrance', 'illdy' ) .'&image='. esc_url( '/layout/images/front-page/front-page-team-1.jpg' ) .'&position='. __( 'Web Designer', 'illdy' ) .'&entry='. __( 'Creative, detail-oriented, always focused.', 'illdy' ) .'&facebook_url='. esc_url( '#' ) .'&twitter_url='. esc_url( '#' ) .'&linkedin_url='. esc_url( '#' ) .'&color=#f18b6d', $the_widget_args );
-					the_widget( 'Illdy_Widget_Person', 'title='. __( 'Jane  Stenton', 'illdy' ) .'&image='. esc_url( '/layout/images/front-page/front-page-team-2.jpg' ) .'&position='. __( 'SEO Specialist', 'illdy' ) .'&entry='. __( 'Curious, tech-geeck and gets serious when it comes to work.', 'illdy' ) .'&facebook_url='. esc_url( '#' ) .'&twitter_url='. esc_url( '#' ) .'&linkedin_url='. esc_url( '#' ) .'&color=#f1d204', $the_widget_args );
-					the_widget( 'Illdy_Widget_Person', 'title='. __( 'John Smith', 'illdy' ) .'&image='. esc_url( '/layout/images/front-page/front-page-team-3.jpg' ) .'&position='. __( 'Developer', 'illdy' ) .'&entry='. __( 'Enthusiastic, passionate with great sense of humor.', 'illdy' ) .'&facebook_url='. esc_url( '#' ) .'&twitter_url='. esc_url( '#' ) .'&linkedin_url='. esc_url( '#' ) .'&color=#6a4d8a', $the_widget_args );
+					the_widget( 'Illdy_Widget_Person', 'title='. __( 'Flavio Henrique', 'illdy' ) .'&image='. esc_url( 'http://lavajatoeco.com.br/wp-content/uploads/2016/05/aa22.png' ) .'&position='. __( 'Criação do Produto', 'illdy' ) .'&entry='. __( '', 'illdy' ) .'&facebook_url='. esc_url( 'https://www.facebook.com/flavio.henrique.56884?fref=ts' )  .'&color=#E1E6B9', $the_widget_args );
+
+					the_widget( 'Illdy_Widget_Person', 'title='. __( 'Francisco de Assis', 'illdy' ) .'&image='. esc_url( 'http://lavajatoeco.com.br/wp-content/uploads/2016/05/aa55.png' ) .'&position='. __( 'Conteúdo do site', 'illdy' ) .'&entry='. __( '', 'illdy' ) .'&facebook_url='. esc_url( 'https://www.facebook.com/francisco.deassis.1042?ref=ts&fref=ts' )  .'&color=#C4D7A4', $the_widget_args );
+
+					the_widget( 'Illdy_Widget_Person', 'title='. __( 'Iago Lima', 'illdy' ) .'&image='. esc_url( 'http://lavajatoeco.com.br/wp-content/uploads/2016/05/aa33.png' ) .'&position='. __( 'Criação do Produto', 'illdy' ) .'&entry='. __( '', 'illdy' ) .'&facebook_url='. esc_url( 'https://www.facebook.com/iago.lima.1232?ref=ts&fref=ts' )  .'&color=#ABC8A4', $the_widget_args );
+
+					the_widget( 'Illdy_Widget_Person', 'title='. __( 'Matheus Leão', 'illdy' ) .'&image='. esc_url( 'http://lavajatoeco.com.br/wp-content/uploads/2016/05/aa11.png' ) .'&position='. __( 'Criação do Produto', 'illdy' ) .'&entry='. __( '', 'illdy' ) .'&facebook_url='. esc_url( 'https://www.facebook.com/matheus.leao.1614?fref=ts' )  .'&color=#375D3B', $the_widget_args );
+
+					the_widget( 'Illdy_Widget_Person', 'title='. __( 'Pedro Henrique', 'illdy' ) .'&image='. esc_url( 'http://lavajatoeco.com.br/wp-content/uploads/2016/05/aa66.jpg' ) .'&position='. __( 'Desenvolvimento e Design', 'illdy' ) .'&entry='. __( '', 'illdy' ) .'&facebook_url='. esc_url( 'https://www.facebook.com/pedrohff' )  .'&color=#6a4d8a', $the_widget_args );
+
+					the_widget( 'Illdy_Widget_Person', 'title='. __( 'Wanderly Silva', 'illdy' ) .'&image='. esc_url( 'http://lavajatoeco.com.br/wp-content/uploads/2016/05/aa44.png' ) .'&position='. __( 'Conteúdo do site', 'illdy' ) .'&entry='. __( '', 'illdy' ) .'&facebook_url='. esc_url( 'https://www.facebook.com/profile.php?id=100001608774092&ref=ts&fref=ts' )  .'&color=#183128', $the_widget_args );
+
 				endif;
 				?>
 			</div><!--/.row-->

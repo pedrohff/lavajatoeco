@@ -3,7 +3,7 @@
 ?>
 <?php include("parts/header.php");?>
 <?php include("admin/login.php");?>
-	
+	<div class="container">
 	<main class="body col-md-8 col-md-offset-2">
 		<div class="row">
 			<form method="post">
@@ -18,7 +18,7 @@
 			</div>
 			<div class="col-md-12">
 				<button type="submit" class="btn btn-primary btn-lg btn-block" name="btn-login">Entrar</button>
-				<button type="button" class="btn btn-default btn-lg btn-block">Registrar</button>
+				<a class="btn btn-default btn-lg btn-block" href="registro.php">Registrar</a>
 			</div>
 		</form>
 	</main>

@@ -3,7 +3,7 @@
 ?>
 <?php include("parts/header.php");?>
 <?php include("admin/register.php");?>
-	
+	<div class="container">
 	<main class="body">
 		<div class="row form">
 			<form method="post">
