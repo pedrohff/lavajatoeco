@@ -22,6 +22,9 @@
 <script type="text/javascript" src="../clientarea/style/js/transition.js"></script>
 <script type="text/javascript" src="../clientarea/style/js/collapse.js"></script>
 <script type="text/javascript" src="../clientarea/style/js/bootstrap-datetimepicker.min.js"></script>
+
+<script type="text/javascript" src="../clientarea/style/js/jquery.mask.min.js"></script>
+<script type="text/javascript" src="../clientarea/style/js/validator.min.js"></script>
 <link rel="stylesheet" type="text/css" href="../clientarea/style/css/bootstrap-datetimepicker.css">
 
 </head>

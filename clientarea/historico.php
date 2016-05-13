@@ -6,7 +6,7 @@
 <?php 
 	$cpf=$usuario['cpf'];
 	$option='';
-	$solicitacoes = mysqli_query($connection,"SELECT Sv.descricao, S.estado, S.datapedido FROM servico Sv INNER JOIN solicitacoes S ON (Sv.codigo=S.servico_codigo) WHERE S.Usuario_cpf=$cpf");
+	$solicitacoes = mysqli_query($connection,"SELECT Sv.descricao, S.estado, CONVERT_TZ(S.datapedido,'+00:00','-03:00') as datapedido FROM servico Sv INNER JOIN solicitacoes S ON (Sv.codigo=S.servico_codigo) WHERE S.Usuario_cpf=$cpf ORDER BY S.datapedido DESC");
  	while ($opt = mysqli_fetch_assoc($solicitacoes)) {
 	 	$option .= '<tr><td>'.$opt['descricao'].'</td><td>'.$opt['estado'].'</td><td>'.$opt['datapedido'].'</td></tr>';
 	}

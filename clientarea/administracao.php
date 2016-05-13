@@ -6,13 +6,9 @@
 <?php 
 	$cpf=$usuario['cpf'];
 	$option='';
-	$solicitacoes = mysqli_query($connection,"SELECT * FROM viewadmin");
+	$solicitacoes = mysqli_query($connection,"SELECT codigo,nome, descricao, estado,CONVERT_TZ(datapedido,'+00:00','-03:00') AS datapedido, data_horario, endereco FROM viewadmin");
  	while ($opt = mysqli_fetch_assoc($solicitacoes)) {
-	 	$option .= '<tr><td>'.$opt['codigo'].'</td><td>'.$opt['nome'].'</td><td>'.$opt['descricao'].'</td><td>'.$opt['estado'].'</td><td>'.$opt['datapedido'].'</td><td>'.$opt['data_horario'].'</td>';
-	 	if($opt['SuperUser_id']=0)
-	 		$option .= '<td>'.$opt['endusuario'].'</td></tr>';
-	 	else
-	 		$option .= '<td>'.$opt['endsuperuser'].'</td></tr>';
+	 	$option .= '<tr><td>'.$opt['codigo'].'</td><td>'.$opt['nome'].'</td><td>'.$opt['descricao'].'</td><td>'.$opt['estado'].'</td><td>'.$opt['datapedido'].'</td><td>'.$opt['data_horario'].'</td><td>'.$opt['endereco'].'</td></tr>';
 	}
 ?>
 	<style>
