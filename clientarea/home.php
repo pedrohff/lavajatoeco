@@ -1,32 +1,16 @@
 <?php
-	$page_title="Home - Area do Cliente";
+	$page_title="Home - Area do Cliente - Lava Jato Eco";
 ?>
 <?php include("admin/connection.php");?>
 <?php include("admin/addservico.php");?>
 <?php include("parts/header.php");?>
-	<div class="container">
+<?php include("parts/nav.php");?>
 	<main class="body">
 		<div class="row">
-			<div class="col-md-6">
-				<h3><?php echo $usuario['nome']  ?></h3>
-			</div>
-			<div class="col-md-6 pull-right">
-				<nav class="nav navbar-default">
-					<ul class="nav navbar-nav navbar-right">
-						<?php 
-							if($usuario['tipo']==01){
-								echo "<li><a href='administracao.php'>Administração</a></li>";
-							}
-							if($usuario['tipo']==00){
-								echo "<li><a href='historico.php'>Historico de Pedidos</a></li>";
-							}
-						?>
-						<li><a href="admin/logout.php?logout">Sair</a></li>
-					</ul>
-				</nav>
+			<div class="col-md-12 user-area">
+				<h2><i class="fa fa-user" aria-hidden="true"></i>   <?php echo $usuario['nome']  ?></h2>
 			</div>
 		</div>
-		<hr></hr>
 		<div class="row">
 		  <div class="col-md-12">
 		  	<h2>Selecione um serviço:</h2>
@@ -34,35 +18,60 @@
 
 		  </div>
 		  <form method="post">
-			  <div class="col-xs-6 col-md-4 col-md-offset-2 servico">
-			    <a href="#" class="thumbnail" name="serv1" data-toggle="modal" data-target="#servico" data-servico="1" id="sv1">
-			      <h3>Lavagem a Seco</h3>
-			      <h5> </h5>
-			      <h1>R$ 40,00</h1>
-			    </a>
-			  </div>
-			  <div class="col-xs-6 col-md-4 servico">
-			    <a href="#" class="thumbnail" name="serv2" data-toggle="modal" data-target="#servico" data-servico="2" id="sv2">
-			      <h3>Lavagem a Vapor</h3>
-			      <h5> </h5>
-			      <h1>R$ 50,00</h1>
-			    </a>
-			  </div>
-
-			  <div class="col-xs-6 col-md-4 col-md-offset-2 servico">
-			    <a href="#" class="thumbnail" name="serv3" data-toggle="modal" data-target="#servico" data-servico="3" id="sv3">
-			      <h3>Lavagem a Seco</h3>
-			      <h5>(completa)</h5>
-			      <h1>R$ 45,00</h1>
-			    </a>
+			  <div class="col-xs-12 col-sm-5 col-lg-4 col-xs-offset-1 col-sm-offset-1 col-lg-offset-2">
+			  	<div class="servico">
+					<div class="sv-header">
+						<img src="style/img/lavagemaseco.png">
+					</div>
+					<div class="sv-footer">
+						<div class="sv-desc">
+						Lavagem a Seco<br/><h4></h4>
+						<a href="#" class="sv-button" name="serv1" data-toggle="modal" data-target="#servico" data-servico="1" id="sv1">R$ 40,00</a>
+						</div>
+					</div>
+				</div>
 			  </div>
 
-			  <div class="col-xs-6 col-md-4 servico">
-			    <a href="#" class="thumbnail" name="serv4" data-toggle="modal" data-target="#servico" data-servico="4" id="sv4">
-			      <h3>Lavagem a Vapor</h3>
-			      <h5>(completa)</h5>
-			      <h1>R$ 55,00</h1>
-			    </a>
+			  <div class="col-xs-12 col-sm-5 col-lg-4 col-xs-offset-1">
+			  	<div class="servico">
+					<div class="sv-header">
+						<img src="style/img/lavagemavapor.png">
+					</div>
+					<div class="sv-footer">
+						<div class="sv-desc">
+						Lavagem a Vapor<br/><h4></h4>
+						<a href="#" class="sv-button" name="serv2" data-toggle="modal" data-target="#servico" data-servico="2" id="sv2">R$ 50,00</a>
+						</div>
+					</div>
+				</div>
+			  </div>
+
+			  <div class="col-xs-12 col-sm-5 col-lg-4 col-xs-offset-1 col-sm-offset-1 col-lg-offset-2">
+			  	<div class="servico">
+					<div class="sv-header">
+						<img src="style/img/lavagemaseco-completa.png">
+					</div>
+					<div class="sv-footer">
+						<div class="sv-desc">
+						Lavagem a Seco<br/><h4>(completa)</h4>
+						<a href="#" class="sv-button" name="serv3" data-toggle="modal" data-target="#servico" data-servico="3" id="sv3">R$ 45,00</a>
+						</div>
+					</div>
+				</div>
+			  </div>
+
+			  <div class="col-xs-12 col-sm-5 col-lg-4 col-xs-offset-1">
+			  	<div class="servico">
+					<div class="sv-header">
+						<img src="style/img/lavagemavapor-completa.png">
+					</div>
+					<div class="sv-footer">
+						<div class="sv-desc">
+						Lavagem a Vapor<br/><h4>(completa)</h4>
+						<a href="#" class="sv-button" name="serv4" data-toggle="modal" data-target="#servico" data-servico="4" id="sv4">R$ 55,00</a>
+						</div>
+					</div>
+				</div>
 			  </div>
 		  </form>
 <script type="text/javascript">
@@ -127,4 +136,5 @@
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
+<?php include("parts/navend.php");?>
 <?php include("parts/footer.php");?>

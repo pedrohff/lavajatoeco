@@ -1,10 +1,10 @@
 <?php
-	$page_title="Login";
+	$page_title="Registrar - Area do Cliente - Lava Jato Eco";
 ?>
 <?php include("parts/header.php");?>
 <?php include("admin/register.php");?>
 	<div class="container">
-	<main class="body">
+	<main class="body body-rg">
 	<script>
 		$(document).ready(function(){
 			$('#cpf').mask('000.000.000-00');
@@ -107,10 +107,10 @@
 
 			<div class="col-md-offset-3">
 			<div class="col-md-4">
-				<button type="submit" class="btn btn-primary btn-lg btn-block" name="btn-signup">Registrar</button>
+				<button type="submit" class="botao botao-primary" name="btn-signup">Registrar</button>
 			</div>
 			<div class="col-md-4 form-inline">
-				<a href="/home.php" class="btn btn-default btn-lg btn-block">Cancelar</a>
+				<a href="/home.php" class="botao">Cancelar</a>
 			</div>
 			</div>
 		</form>
